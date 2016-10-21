@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>思为装饰</title>
+<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'/>
+<link rel="stylesheet" href="static/css/common.css">
+<link rel="stylesheet" href="static/css/font-awesome-4.6.3/css/font-awesome.css">
+<link rel="stylesheet" href="static/js/Swiper-3.3.1/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="static/js/Swiper-3.3.1/animate.min.css">
+<script src="static/js/jquery-1.10.1.min.js"></script>
+<script src="static/js/Swiper-3.3.1/swiper-3.3.1.min.js"></script>
+<script src="static/js/Swiper-3.3.1/swiper.animate1.0.2.min.js"></script>
+<style>
+img{
+    display:block;
+}
+.swiper-container{
+    height: 8rem;
+    position: relative;
+}
+.swiper-slide{
+    color: #fff;
+    line-height: 8rem;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 10;
+}
+.swiper-slide.active{
+    z-index: 20;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet {
+width: 6px;
+height: 6px;
+background: #fff;
+opacity: .4;
+}
+.swiper-pagination-bullet-active {
+opacity: 1;
+}
+#style_choose,#yz_choose,#rz_choose,#gxb_choose,#house_area,#cal_btn_contain{
+    background-color: #fff;
+    padding: .5rem 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+.style_choose-header,.yz_choose-header,.rz_choose-header,.gxb_choose-header{
+    border-left: .15rem solid #5ba729;
+    font-size: .8rem;
+    line-height: 1rem;
+    margin: .5rem 0 0rem .75rem;
+    padding: 0 .5rem;
+    color: #5ba729;
+    font-weight: bolder;
+}
+.choose_item,.ck_choose_item{
+    border: 1px #c5c8cf solid;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: 0 0.4rem;
+    margin: 0.5rem 0.5rem 0 0;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    font-style: normal;
+    font-size: 1rem;
+}
+.sel{    
+    background-color: #5ba729;
+    color: #fff;
+}
+#house_area div{
+    margin: 0 1rem;
+    border: 1px solid #5ba729;
+    position: relative;
+    border-radius: 0.3rem;
+}
+#house_area>div>input{
+    width: 90%;
+    height: 2rem;
+    margin: 0 0.5rem 0 0.5rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #5ba729;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+    text-align: left;
+}
+#house_area>div>label{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    color: #666;
+
+}
+#cal_btn_contain{
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+}
+#cal_btn{
+    text-align: center;
+    border-radius: 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    background-color: #f79c33;
+    color: #fff;
+
+}
+</style>
+</head>
+
+<body>
+<header class="sw-header sw-header-default">
+    <div class="sw-header-left sw-header-nav">
+        <a href="javascript: void(0)" class="" onclick="history.go(-1)">
+            <i class="sw-header-icon fa fa-arrow-left"></i>
+        </a>
+    </div>
+    <h1 class="sw-header-title">
+        <a href="javascript: void(0)">装修预算</a>
+    </h1>
+    <div class="sw-header-right sw-header-nav">
+        <a href="index.html">
+            <i class="sw-header-icon fa fa-home"></i>
+        </a>
+    </div>
+</header>
+<div class="main">
+    <div class="content_section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-id="1"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan1.jpg"></a></div>
+                <div class="swiper-slide" data-id="2"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan2.jpg"></a></div>
+                <div class="swiper-slide" data-id="3"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan3.jpg"></a></div>
+                <div class="swiper-slide" data-id="4"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan4.jpg"></a></div>
+                <div class="swiper-slide" data-id="5"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan5.jpg"></a></div>
+                <div class="swiper-slide" data-id="6"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan6.jpg"></a></div>
+                <div class="swiper-slide" data-id="7"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan7.jpg"></a></div>
+                <div class="swiper-slide" data-id="8"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan8.jpg"></a></div>
+                <div class="swiper-slide" data-id="9"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan9.jpg"></a></div>
+            </div>
+        </div>
+
+        <div id="style_choose">
+            <div class="style_choose-header">方案选择</div>
+            <div class="style_choose-body">
+                <p style="padding: 0 1rem;">
+                    <i class="style_choose_item choose_item" data-id="1">现代</i>
+                    <i class="style_choose_item choose_item" data-id="2">简欧</i>
+                    <i class="style_choose_item choose_item" data-id="3">中式</i>
+                    <i class="style_choose_item choose_item" data-id="4">地中海</i>
+                    <i class="style_choose_item choose_item" data-id="5">简约</i>
+                    <i class="style_choose_item choose_item" data-id="6">欧式</i>
+                    <i class="style_choose_item choose_item" data-id="7">田园</i>
+                    <i class="style_choose_item choose_item" data-id="8">混搭</i>
+                    <i class="style_choose_item choose_item" data-id="9">新古典</i>
+                </p>
+            </div>
+        </div>
+        <div id="yz_choose">
+            <div class="yz_choose-header">硬装套餐</div>
+            <div class="yz_choose-body">
+                <p style="padding: 0 1rem;">
+                    <i class="yz_choose_item choose_item" data-id="999">999元/㎡</i>
+                    <i class="yz_choose_item choose_item" data-id="666">666元/㎡</i>
+                </p>
+            </div>
+        </div>
+        <div id="rz_choose">
+            <div class="rz_choose-header">软装套餐</div>
+            <div class="rz_choose-body">
+                <p style="padding: 0 1rem;">
+                    <i class="rz_choose_item choose_item" data-id="A">家悦版</i>
+                    <i class="rz_choose_item choose_item" data-id="B">豪华版</i>
+                    <i class="rz_choose_item choose_item" data-id="C">尊享版</i>
+                </p>
+            </div>
+        </div>
+        <div id="gxb_choose">
+            <div class="gxb_choose-header">个性包套餐(可多选)</div>
+            <div class="gxb_choose-body">
+                <p style="padding: 0 1rem;">
+                    <i class="gxb_choose_item ck_choose_item" data-id="G1">个性包1</i>
+                    <i class="gxb_choose_item ck_choose_item" data-id="G2">个性包2</i>
+                    <i class="gxb_choose_item ck_choose_item" data-id="G3">个性包3</i>
+                    <i class="gxb_choose_item ck_choose_item" data-id="G4">个性包4</i>
+                    <i class="gxb_choose_item ck_choose_item" data-id="G5">个性包5</i>
+                </p>
+            </div>
+        </div>
+        <div id="house_area">
+            <div>
+                <input type="text" id="house_size" value="" placeHolder="请输入房屋面积" /><label for="house_size">m²</label>
+            </div>
+        </div>
+        <div id="cal_btn_contain">
+            <div id="cal_btn" onclick="calculate()">立即计算</div>
+        </div>
+
+    </div>
+    <div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
+    <br>苏ICP备xxxxxxx号
+</div>
+</div>
+<script type="text/javascript">
+    $(function () {        
+        init();
+
+        $('.ck_choose_item').click(function(){
+            $(this).toggleClass('sel');
+        });
+
+        $('.choose_item').click(function(){
+            if($(this).hasClass('style_choose_item')){
+                var id = $(this).attr('data-id');
+                $(".swiper-slide[data-id="+id+"]").addClass('active').siblings().removeClass('active');
+            } 
+            $(this).addClass('sel').siblings().removeClass('sel');
+        });
+    });
+
+    function init(){
+        var id = window.location.search.substr(4);
+        if(id == parseInt(id)){
+            $(".swiper-slide[data-id="+id+"]").addClass('active').siblings().removeClass('active');
+            $(".style_choose_item[data-id="+id+"]").addClass('sel').siblings().removeClass('sel');
+        }        
+    }
+
+    function calculate(){
+        var yz_price = 0,rz_price = 0,gxb_price = 0;
+        var rz_price_arr = {
+            'A' : 20000,'B' : 30000, 'C' : 50000
+        };
+        var gxb_price_arr = {'G1': 1000,'G2' : 800, 'G3' : 700,'G4' : 900,'G5' : 1200};
+        var style_choose_item = $(".style_choose_item.sel").attr('data-id');
+        if(typeof(style_choose_item)=="undefined"){
+            alert('请选择风格方案');
+            return;
+        }
+        var yz_choose_item = $(".yz_choose_item.sel").attr('data-id');
+        if(typeof(yz_choose_item)=="undefined"){
+            alert('请选择硬装套餐');
+            return;
+        }
+        var rz_choose_item = $(".rz_choose_item.sel").attr('data-id');
+        if(typeof(rz_choose_item)=="undefined"){
+            alert('请选择软装套餐');
+            return;
+        }
+        var house_size = $('#house_size').val();
+        if(house_size != parseInt(house_size)){
+            alert('房屋面积请输入数字');
+            $('#house_size').focus();
+            return;
+        }
+        $(".gxb_choose_item.sel").each(function(){
+            gxb_price += gxb_price_arr[$(this).attr('data-id')];
+        });
+        yz_price = house_size*parseInt(yz_choose_item);
+        rz_price = rz_price_arr[rz_choose_item];
+        var money = yz_price + rz_price + gxb_price;
+        alert(money);
+    }
+</script>
+
+<div class="nav-bottom">
+</div>
+</body>
+</html>
