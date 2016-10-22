@@ -139,15 +139,9 @@ opacity: 1;
     <div class="content_section">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-id="1"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan1.jpg"></a></div>
-                <div class="swiper-slide" data-id="2"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan2.jpg"></a></div>
-                <div class="swiper-slide" data-id="3"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan3.jpg"></a></div>
-                <div class="swiper-slide" data-id="4"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan4.jpg"></a></div>
-                <div class="swiper-slide" data-id="5"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan5.jpg"></a></div>
-                <div class="swiper-slide" data-id="6"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan6.jpg"></a></div>
-                <div class="swiper-slide" data-id="7"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan7.jpg"></a></div>
-                <div class="swiper-slide" data-id="8"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan8.jpg"></a></div>
-                <div class="swiper-slide" data-id="9"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan9.jpg"></a></div>
+                <div class="swiper-slide" data-id="1"><a href="calculate.html"><img src="upload/image/index_scroll_pic/jianyue.jpg"></a></div>
+                <div class="swiper-slide" data-id="2"><a href="calculate.html"><img src="upload/image/index_scroll_pic/oushi.jpg"></a></div>
+                <div class="swiper-slide" data-id="3"><a href="calculate.html"><img src="upload/image/index_scroll_pic/xinzhongshi.jpg"></a></div>
             </div>
         </div>
 
@@ -155,15 +149,9 @@ opacity: 1;
             <div class="style_choose-header">方案选择</div>
             <div class="style_choose-body">
                 <p style="padding: 0 1rem;">
-                    <i class="style_choose_item choose_item" data-id="1">现代</i>
-                    <i class="style_choose_item choose_item" data-id="2">简欧</i>
-                    <i class="style_choose_item choose_item" data-id="3">中式</i>
-                    <i class="style_choose_item choose_item" data-id="4">地中海</i>
-                    <i class="style_choose_item choose_item" data-id="5">简约</i>
-                    <i class="style_choose_item choose_item" data-id="6">欧式</i>
-                    <i class="style_choose_item choose_item" data-id="7">田园</i>
-                    <i class="style_choose_item choose_item" data-id="8">混搭</i>
-                    <i class="style_choose_item choose_item" data-id="9">新古典</i>
+                    <i class="style_choose_item choose_item" data-id="1">简约</i>
+                    <i class="style_choose_item choose_item" data-id="2">欧式</i>
+                    <i class="style_choose_item choose_item" data-id="3">新中式</i>
                 </p>
             </div>
         </div>
@@ -171,8 +159,7 @@ opacity: 1;
             <div class="yz_choose-header">硬装套餐</div>
             <div class="yz_choose-body">
                 <p style="padding: 0 1rem;">
-                    <i class="yz_choose_item choose_item" data-id="999">999元/㎡</i>
-                    <i class="yz_choose_item choose_item" data-id="666">666元/㎡</i>
+                    <i class="yz_choose_item choose_item" data-id="1288">1288元/㎡</i>
                 </p>
             </div>
         </div>
@@ -193,8 +180,6 @@ opacity: 1;
                     <i class="gxb_choose_item ck_choose_item" data-id="G1">个性包1</i>
                     <i class="gxb_choose_item ck_choose_item" data-id="G2">个性包2</i>
                     <i class="gxb_choose_item ck_choose_item" data-id="G3">个性包3</i>
-                    <i class="gxb_choose_item ck_choose_item" data-id="G4">个性包4</i>
-                    <i class="gxb_choose_item ck_choose_item" data-id="G5">个性包5</i>
                 </p>
             </div>
         </div>
@@ -234,6 +219,7 @@ opacity: 1;
         if(id == parseInt(id)){
             $(".swiper-slide[data-id="+id+"]").addClass('active').siblings().removeClass('active');
             $(".style_choose_item[data-id="+id+"]").addClass('sel').siblings().removeClass('sel');
+            $(".yz_choose_item").addClass('sel');
         }        
     }
 
@@ -245,22 +231,34 @@ opacity: 1;
         var gxb_price_arr = {'G1': 1000,'G2' : 800, 'G3' : 700,'G4' : 900,'G5' : 1200};
         var style_choose_item = $(".style_choose_item.sel").attr('data-id');
         if(typeof(style_choose_item)=="undefined"){
-            alert('请选择风格方案');
+            layer.open({
+              content: '请选择风格方案'
+              ,time: 2
+            });
             return;
         }
         var yz_choose_item = $(".yz_choose_item.sel").attr('data-id');
         if(typeof(yz_choose_item)=="undefined"){
-            alert('请选择硬装套餐');
+            layer.open({
+              content: '请选择硬装套餐'
+              ,time: 2
+            });
             return;
         }
         var rz_choose_item = $(".rz_choose_item.sel").attr('data-id');
         if(typeof(rz_choose_item)=="undefined"){
-            alert('请选择软装套餐');
+            layer.open({
+              content: '请选择硬装套餐'
+              ,time: 2
+            });
             return;
         }
         var house_size = $('#house_size').val();
         if(house_size != parseInt(house_size)){
-            alert('房屋面积请输入数字');
+            layer.open({
+              content: '房屋面积请输入数字'
+              ,time: 2
+            });
             $('#house_size').focus();
             return;
         }
@@ -275,6 +273,8 @@ opacity: 1;
 </script>
 
 <div class="nav-bottom">
+<link rel="stylesheet" href="static/js/layer.mobile-v2.0/layer_mobile/need/layer.css">
+<script src="static/js/layer.mobile-v2.0/layer_mobile/layer.js"></script>
 </div>
 </body>
 </html>

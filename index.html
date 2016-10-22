@@ -156,6 +156,30 @@ opacity: 1;
     margin: 0 auto;
     background-image: url(static/images/brand-logos.png);
 }
+.step_section{
+	background-color: #fff;
+    padding: .5rem 0;
+    margin-bottom: .5rem
+}
+.step_item{
+	width: 33.33333333%;
+	float: left;
+    padding: 0 .5rem 1rem
+}
+.step_item div{
+	border: 2px solid #5ba729;
+	font-size: 0.8rem;
+	line-height: 2rem;
+	width: 5rem;
+	text-align: center;
+}
+.effect_section{
+	background-color: #fff;
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    margin-bottom: .5rem;
+}
 </style>
 </head>
 
@@ -178,24 +202,18 @@ opacity: 1;
 </header>
 <div class="main">
 	<div class="content_section">
-		<div class="swiper-container">
+		<div class="swiper-container" id="scroll_area">
 		    <div class="swiper-wrapper">
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan1.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan2.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan3.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan4.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan5.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan6.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan7.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan8.jpg"></a></div>
-		        <div class="swiper-slide"><a href="calculate.html"><img src="upload/image/index_scroll_pic/fangan9.jpg"></a></div>
+		        <div class="swiper-slide"><a href="calculate.html?id=1"><img src="upload/image/index_scroll_pic/jianyue.jpg"></a></div>
+		        <div class="swiper-slide"><a href="calculate.html?id=2"><img src="upload/image/index_scroll_pic/oushi.jpg"></a></div>
+		        <div class="swiper-slide"><a href="calculate.html?id=3"><img src="upload/image/index_scroll_pic/xinzhongshi.jpg"></a></div>
 		    </div>
 		  	<div class="swiper-pagination"></div>  
 		</div>
 		<div class="circle_nav">
 	        <ul class="circle_nav_list">
 	            <li>
-	                <a href="" class="fa fa-university"></a>
+	                <a href="effect_list.html" class="fa fa-university"></a>
 	                <span>装修效果</span>
 	            </li>
 	            <li>
@@ -203,11 +221,11 @@ opacity: 1;
 	                <span>装修预算</span>
 	            </li>
 	            <li>
-	                <a href="" class="fa fa-tty"></a>
+	                <a href="contact_us.html" class="fa fa-tty"></a>
 	                <span>联系我们</span>
 	            </li>
 	            <li>
-	                <a href="" class="fa fa-video-camera"></a>
+	                <a href="construction_live.html" class="fa fa-video-camera"></a>
 	                <span>施工直播</span>
 	            </li>
 	        </ul>
@@ -268,15 +286,76 @@ opacity: 1;
             </div>
         </div>
 
+        <div class="effect_section">
+            <div class="section-header">装修效果</div>
+            <div class="section-body">
+                <div class="swiper-container" id="effect_area">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/dongfangxilong/2.jpg"></a></div>
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/gaoke/1.jpg"></a></div>
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/biguiyuan2/1.jpg"></a></div>
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/jindizizaicheng/1.jpg"></a></div>
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/jinjihuijinguoji/zhuwo.jpg"></a></div>
+				        <div class="swiper-slide"><a href="javascript:;"><img src="upload/image/effect_pic/biguiyuan/4ps.jpg"></a></div>
+				    </div>
+				</div>
+            </div>
+        </div>
+
+        <div class="step_section">
+            <div class="section-header">装修流程</div>
+            <div class="section-body">
+                <ul class="clearfix">
+                    <li class="step_item">
+                        <div class="step1">预约受理</div>
+                    </li>
+                    <li class="step_item">
+                        <div class="step2">量房签约</div>
+                    </li>
+                    <li class="step_item">
+                        <div class="step3">水电施工</div>
+                    </li>
+                    <li class="step_item">
+                        <div class="step4">泥木施工</div>
+                    </li>
+                    <li class="step_item">
+                        <div class="step5">油漆施工</div>
+                    </li>
+                    <li class="step_item">
+                        <div class="step6">安装竣工</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        
+
 	</div>
 	<div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
     <br>苏ICP备xxxxxxx号
 </div>
 </div>
 <script type="text/javascript">
-var mySwiper = new Swiper('.swiper-container',{
+var mySwiper1 = new Swiper('#scroll_area',{
 	pagination : '.swiper-pagination',
 	autoplay: 5000,
+	autoplayDisableOnInteraction : false,
+	loop : true,
+});
+
+var mySwiper2 = new Swiper('#effect_area',{
+	effect : 'coverflow',
+	slidesPerView: 2,
+	centeredSlides: true,
+	coverflow: {
+        rotate: -55,
+        stretch: -10,
+        depth: 100,
+        modifier: 2,
+        slideShadows : true
+    },
+	autoplay: 3000,
 	autoplayDisableOnInteraction : false,
 	loop : true,
 });
@@ -286,17 +365,5 @@ var mySwiper = new Swiper('.swiper-container',{
 <div class="nav-bottom">
 
 </div>
-<!-- <div class="alertOveryLayer">
-	<div>
-		<div class="alert-lay">
-			<div class="overlay-bd">
-				提示消息内容
-			</div>
-			<div class="overlay-footer">
-				操作
-			</div>
-		</div>
-	</div>
-</div> -->
 </body>
 </html>

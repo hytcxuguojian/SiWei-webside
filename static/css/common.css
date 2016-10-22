@@ -167,3 +167,9 @@ ul,li{ list-style: none; list-style-position: outside; }
 }
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .clearfix{*+height:1%;}
+
+
+/************************自定义layer_mobile插件弹框样式****************************/
+.lm_remind_msg .layui-m-layercont{
+    /*background-color:#09C1FF; color:#fff;*/
+}
