@@ -162,7 +162,7 @@ ul,li{ list-style: none; list-style-position: outside; }
     text-align: center;
     font-size: .6rem;
     color: #b9b8b8;
-    padding: .85rem .85rem 2.5rem .85rem;
+    padding: .85rem .85rem 0.85rem .85rem;
     line-height: .9rem;
 }
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
