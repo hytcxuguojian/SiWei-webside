@@ -95,7 +95,8 @@ opacity: 1;
     max-width: 100%;
     background: #fff;
     margin-bottom: .5rem;
-    font-size: .7rem
+    font-size: .7rem;
+    padding-top: 0.5rem;
 }
 .gride{
 	position: relative;
@@ -232,24 +233,27 @@ opacity: 1;
 	    </div>
 
 	    <div class="rectangle_nav">
-	        <div class="grides" style="position:relative; overflow:hidden;">
-	            <a href="" class="gride">
-	            	<div>
-	            		<span>硬装套餐</span>
-	            	</div>
-	            </a>
-	            <a href="" class="gride">
-	            	<div>
-	            		<span>软装套餐</span>
-	            	</div>
-	            </a>
-	            <a href="" class="gride" style="border-right: 0; ">
-	            	<div>
-	            		<span>个性包</span>
-	            	</div>
-	            </a>
-	        </div>
-	    </div>
+            <div class="section-header">装修套餐</div>
+            <div class="section-body">
+    	        <div class="grides" style="position:relative; overflow:hidden;">
+    	            <a href="yingzhuang.html" class="gride">
+    	            	<div>
+    	            		<span>硬装套餐</span>
+    	            	</div>
+    	            </a>
+    	            <a href="ruanzhuang.html" class="gride">
+    	            	<div>
+    	            		<span>软装套餐</span>
+    	            	</div>
+    	            </a>
+    	            <a href="gexingbao.html" class="gride" style="border-right: 0; ">
+    	            	<div>
+    	            		<span>个性包</span>
+    	            	</div>
+    	            </a>
+    	        </div>
+            </div>
+        </div>
 
 	    <div class="brand_section">
             <div class="section-header">主材品牌</div>
@@ -346,11 +350,11 @@ var mySwiper1 = new Swiper('#scroll_area',{
 
 var mySwiper2 = new Swiper('#effect_area',{
 	effect : 'coverflow',
-	slidesPerView: 2,
+	slidesPerView: 1.5,
 	centeredSlides: true,
 	coverflow: {
         rotate: 70,
-        stretch: 5,
+        stretch: 30,
         depth: 60,
         modifier: 1,
         slideShadows : true

@@ -13,16 +13,16 @@
 <script src="static/js/Swiper-3.3.1/swiper.animate1.0.2.min.js"></script>
 <style>
 *{
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }
 *, :after, :before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 body{
-	font-family:  Helvetica Neue,Helvetica,Arial,sans-serif;
-	color: #333;
+    font-family:  Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #333;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -30,12 +30,49 @@ img{ border: 0px; }
 a{ text-decoration: none; cursor: pointer;}
 ul,li{ list-style: none; list-style-position: outside; }
 
+.live-list {
+    width: 100%;
+    background-color: #ececec;
+}
+
+.live-list .live-list-item {
+    width: 100%;
+    margin-bottom: .5rem;
+    background-color: #fff
+}
+
+.live-list .live-list-item a img {
+    width: 100%
+}
+
+.live-list .live-list-item a .live-list-info {
+    padding: 0
+}
+
+.live-list .live-list-item a .live-list-info img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #5ba729;
+    border-radius: 50%;
+    float: left;
+    margin: .5rem .75rem
+}
+
+.live-list .live-list-item a .live-list-info .desc {
+    float: left;
+    color: #555;
+    font-size: .7rem;
+    line-height: 1rem;
+    padding-top: 0.75rem;
+    margin: 0
+}
+.desc p{ color: #000; }
 </style>
 </head>
 
 <body>
 <header class="sw-header sw-header-default">
-	<div class="sw-header-left sw-header-nav">
+    <div class="sw-header-left sw-header-nav">
         <a href="javascript: void(0)" class="" onclick="history.go(-1)">
             <i class="sw-header-icon fa fa-arrow-left"></i>
         </a>
@@ -50,11 +87,57 @@ ul,li{ list-style: none; list-style-position: outside; }
     </div>
 </header>
 <div class="main">
-	<div class="content_section">
-		
-
-	</div>
-	<div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
+    <div class="content_section">
+        <div class="effect_env">
+            <ul class="live-list">
+                    <li class="live-list-item">
+                        <a href="javascript:;">
+                            <div class="live-list-info clearfix">
+                                <img src="static/images/default_head_img.jpg">
+                                <span class="desc"><p>简约  两居 70m<sup>2</sup></p>钱先生</span>
+                            </div>
+                            <img src="upload/image/effect_pic/dongfangxilong/2.jpg">
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a href="javascript:;">
+                            <div class="live-list-info clearfix">
+                                <img src="static/images/default_head_img.jpg">
+                                <span class="desc"><p>欧式  两居 94m<sup>2</sup></p>李先生</span>
+                            </div>
+                            <img src="upload/image/effect_pic/gaoke/1.jpg">
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a href="javascript:;">
+                            <div class="live-list-info clearfix">
+                                <img src="static/images/default_head_img.jpg">
+                                <span class="desc"><p>简约  三居 124m<sup>2</sup></p>陈先生</span>
+                            </div>
+                            <img src="upload/image/effect_pic/jindizizaicheng/1.jpg">
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a href="javascript:;">
+                            <div class="live-list-info clearfix">
+                                <img src="static/images/default_head_img.jpg">
+                                <span class="desc"><p>简约  三居 130m<sup>2</sup></p>宋先生</span>
+                            </div>
+                            <img src="upload/image/effect_pic/jinjihuijinguoji/zhuwo.jpg">
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a href="javascript:;"><div class="live-list-info clearfix">
+                                <img src="static/images/default_head_img.jpg">
+                                <span class="desc"><p>简约  两居 86m<sup>2</sup></p>王先生</span>
+                            </div>
+                            <img src="upload/image/effect_pic/meilijiayuan/zhuwo.JPG">
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
     <br>苏ICP备xxxxxxx号
 </div>
 </div>
