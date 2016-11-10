@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>思为装饰</title>
+<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'/>
+<link rel="stylesheet" href="static/css/common.css">
+<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+	font-family:  Helvetica Neue,Helvetica,Arial,sans-serif;
+	color: #333;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+img{ border: 0px; }
+a{ text-decoration: none; cursor: pointer;}
+ul,li{ list-style: none; list-style-position: outside; }
+
+.white-bg {
+    background-color: #ffffff;
+}
+.zhibo-header {
+    padding: 0
+}
+
+.zhibo-header img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #5ba729;
+    border-radius: 50%;
+    float: left;
+    margin: .5rem .75rem
+}
+
+.zhibo-header .desc {
+    float: left;
+    color: #555;
+    font-size: .8rem;
+    line-height: 1rem;
+    padding-top: 0.75rem;
+    margin: 0
+}
+.desc p{ color: #000; }
+.zhibo-summary {
+    background-color: #ffffff;
+    margin-bottom: .5rem;
+}
+.zhibo-summary li {
+    padding: .4rem .5rem;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 0.9rem;
+}
+.zhibo-summary li i { 
+    color: #5ba729;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+}
+
+.zhibo-jindu {
+    width: 100%;
+    padding: .5rem 0 .5rem .5rem;
+    background-color: #fff;
+    font-size: 0.75rem;
+}
+
+.zhibo-jindu .step-header-special {
+    background-color: #fff
+}
+
+.zhibo-jindu .step-header-special .step-time {
+    color: #5ba729;
+    margin-right: .25rem
+}
+
+.zhibo-jindu .step-header {
+    border-left: 1px solid #d9d9d9;
+    margin-left: .75rem;
+    padding: .4rem 1rem 0
+}
+
+.zhibo-jindu .step-header:before {
+    background-color: #5ba729;
+    border-radius: 50%;
+    content: "";
+    height: .4rem;
+    width: .4rem;
+    margin-left: -1.2rem;
+    margin-top: .2rem;
+    position: absolute
+}
+
+.zhibo-jindu .step-content {
+    border-left: 1px solid #d9d9d9;
+    margin-left: .75rem;
+    padding: .75rem
+}
+.zhibo-jindu .step-content .live_photo{
+    display: inline-block;
+    width: 30%;
+}
+.zhibo-jindu .step-content .live_photo img{
+    max-width: 100%;
+}
+.jindu_icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #5ba729;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #5ba729;
+}
+.jindu_des,.jindu_icon{
+    float: left;
+    line-height: 1.5rem;
+}
+</style>
+</head>
+
+<body>
+<header class="sw-header sw-header-default">
+	<div class="sw-header-left sw-header-nav">
+        <a href="javascript: void(0)" class="" onclick="history.go(-1)">
+            <i class="sw-header-icon fa fa-arrow-left"></i>
+        </a>
+    </div>
+    <h1 class="sw-header-title">
+        <a href="javascript: void(0)">施工进度</a>
+    </h1>
+    <div class="sw-header-right sw-header-nav">
+        <a href="index.html">
+            <i class="sw-header-icon fa fa-home"></i>
+        </a>
+    </div>
+</header>
+<div class="main">
+	<div class="content_section">
+        <div class="zhibo-header white-bg clearfix">
+            <img src="static/images/default_head_img.jpg">
+            <span class="desc"><p>简约  两居 70m<sup>2</sup></p>钱先生</span>
+        </div>
+        <div class="zhibo-summary">
+            <ul>
+                <li>
+                    <i class="fa fa-map-marker"></i>
+                    <span>地址：东方熙龙山院</span>
+                </li>
+                <li>
+                    <i class="fa fa-yen"></i>
+                    <span>总价：8.5万</span>
+                </li>
+            </ul>
+        </div>
+        <div class="zhibo-jindu">
+            <div class="step-header-special clearfix">
+                <div class="jindu_icon"><i class="fa fa-gavel"></i></div>
+                <div class="jindu_des"><span class="step-time">2016-07-01</span>拆除阶段</span></div>
+            </div>
+            <div class="step-header"><span class="step-time"></span>施工进度</span></div>
+            <div class="step-content">
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/chaigai/chaigai5.jpg"></div>
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/chaigai/chaigai2.jpg"></div>
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/chaigai/chaigai3.jpg"></div>
+            </div>
+            <div class="step-header-special clearfix">
+                <div class="jindu_icon"><i class="fa fa-bolt"></i></div>
+                <div class="jindu_des"><span class="step-time">2016-07-15</span>水电阶段</span></div>
+            </div>
+            <div class="step-header"><span class="step-time"></span>施工进度</span></div>
+            <div class="step-content">
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/shuidian/shuidian4.jpg"></div>
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/shuidian/shuidian5.jpg"></div>
+                <div class="live_photo"><img src="http://img.zixuwuyou.cn/upload/image/live/shuidian/shuidian6.jpg"></div>
+            </div>
+        </div>
+
+	</div>
+	<div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
+    <br>苏ICP备xxxxxxx号
+</div>
+</div>
+
+<div class="nav-bottom">
+
+</div>
+</body>
+</html>

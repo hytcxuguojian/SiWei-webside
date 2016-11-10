@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>思为装饰</title>
+<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'/>
+<link rel="stylesheet" href="static/css/common.css">
+<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family:  Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #333;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+img{ border: 0px; }
+a{ text-decoration: none; cursor: pointer;}
+ul,li{ list-style: none; list-style-position: outside; }
+
+.live-list {
+    width: 100%;
+}
+
+.live-list .live-list-item {
+    width: 100%;
+    background-color: #fff;
+    border-bottom:1px solid #dfdfdf;
+}
+
+.live-list .live-list-item a{
+    padding: 10px;
+    position: relative;
+    display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    box-orient: horizontal;
+}
+
+.live-list .live-list-item a .pic {
+    margin-right: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 0.4rem;
+}
+.item .pic img {
+    border-radius: 0.2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.item .content {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    position: relative;
+    padding-top: 6px;
+}
+.item .content .name{
+    color: #000;
+    font-size: .9rem;
+    line-height: 1.2rem;
+    margin: 0;
+}
+.item .content .desc{
+    color: #333;
+    font-size: .7rem;
+    line-height: 1rem;
+    margin: 0;
+}
+.item .content .info{
+    color: #666;
+    font-size: .7rem;
+    line-height: 1.2rem;
+    margin: 0;
+}
+.info .price{
+    color: #f79c33;
+    font-size: .9rem;
+}
+.info .master{
+    color: #000;
+    font-size: .8rem;
+    padding-left: 1.2rem;
+}
+</style>
+</head>
+
+<body>
+<header class="sw-header sw-header-default">
+    <div class="sw-header-left sw-header-nav">
+        <a href="javascript: void(0)" class="" onclick="history.go(-1)">
+            <i class="sw-header-icon fa fa-arrow-left"></i>
+        </a>
+    </div>
+    <h1 class="sw-header-title">
+        <a href="javascript: void(0)">施工直播</a>
+    </h1>
+    <div class="sw-header-right sw-header-nav">
+        <a href="index.html">
+            <i class="sw-header-icon fa fa-home"></i>
+        </a>
+    </div>
+</header>
+<div class="main">
+    <div class="content_section">
+        <div class="live_env">
+            <ul class="live-list">
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=1">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/dongfangxilong/2.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="name">东方熙龙山院</div>
+                                <div class="desc">简约 &nbsp&nbsp 两居 &nbsp&nbsp 70m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">8.5万</span><span class="master">钱先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=2">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/gaoke/1.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="name">高科荣境</div>
+                                <div class="desc">欧式 &nbsp&nbsp 两居 &nbsp&nbsp 94m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">13.7万</span><span class="master">李先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=3">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/biguiyuan2/1.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="name">碧桂园城市花园香鸢园</div>
+                                <div class="desc">新中式 &nbsp&nbsp 三居 &nbsp&nbsp 120m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">15.2万</span><span class="master">王先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=4">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/jindizizaicheng/1.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="name">金地自在城</div>
+                                <div class="desc">简约 &nbsp&nbsp 三居 &nbsp&nbsp 124m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">15万</span><span class="master">陈先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=5">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/jinjihuijinguoji/zhuwo.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="name">金基汇锦国际</div>
+                                <div class="desc">简约 &nbsp&nbsp 三居 &nbsp&nbsp 130m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">16万</span><span class="master">宋先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="live-list-item">
+                        <a class="item" href="construction_live_detail.html?id=6">
+                            <div class="pic">
+                            <img src="http://img.zixuwuyou.cn/upload/image/effect_pic/meilijiayuan/zhuwo.JPG">
+                            </div>
+                            <div class="content">
+                                <div class="name">美丽嘉园</div>
+                                <div class="desc">简约 &nbsp&nbsp 三居 &nbsp&nbsp 86m<sup>2</sup></div>
+                                <div class="info">￥<span class="price">9.7万</span><span class="master">王先生</span></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
+    <br>苏ICP备xxxxxxx号
+</div>
+</div>
+
+<div class="nav-bottom">
+
+</div>
+</body>
+</html>
