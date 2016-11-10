@@ -299,13 +299,17 @@ ul,li{ list-style: none; list-style-position: outside; }
         var kitchen = $('#room').val();
         var toilet = $('#toilet').val();
         var balcony = $('#balcony').val();
-        var ip_address = typeof(returnCitySN["cip"])=="undefined" ? returnCitySN["cip"] : '0.0.0.0';
-        var ip_city = typeof(returnCitySN["cname"])=="undefined" ? returnCitySN["cname"] : '未知';
+        var ip_address = typeof(returnCitySN["cip"])!="undefined" ? returnCitySN["cip"] : '0.0.0.0';
+        var ip_city = typeof(returnCitySN["cname"])!="undefined" ? returnCitySN["cname"] : '未知';
         $.ajax({
             url:"http://zixuwuyou.cn/siwei-admin/",
             type:"post",
             data:{action:"order",mobile:mobile,name:name,house_area:house_area,room:room,holl:holl,kitchen:kitchen,toilet:toilet,balcony:balcony,ip_address:ip_address,ip_city:ip_city},
-            success:function(res){
+            success:function(result){
+                if (!result) {
+                    return;
+                };
+                var res = eval("("+result+")");
                 if (res.status == 200) {
                     $('#submit').remove();
                     $('p.res_msg').html(res.msg).show();
