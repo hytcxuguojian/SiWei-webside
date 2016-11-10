@@ -152,7 +152,7 @@ ul,li{ list-style: none; list-style-position: outside; }
 .main {
     margin: 0 auto;
     background: #ececec;
-    position: relative
+    position: relative;
 }
 
 .content_section {
