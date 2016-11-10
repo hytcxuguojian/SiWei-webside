@@ -112,7 +112,23 @@ opacity: 1;
     font-size: 1rem;
     background-color: #f79c33;
     color: #fff;
-
+}
+#cal_result{
+    display: block;
+    width: 100%;
+    height: 4rem;
+    background-color: #f79c33;
+}
+#cal_result .money{
+    width: 100%;
+    text-align: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bolder;
+    padding: 0.8rem 0;
+    background-color: #f79c33;
 }
 </style>
 </head>
@@ -189,6 +205,9 @@ opacity: 1;
         <div id="cal_btn_contain">
             <div id="cal_btn" onclick="calculate()">立即计算</div>
         </div>
+        <div id="cal_result">
+            <div class="money">128473</div>
+        </div>
 
     </div>
     <div class="footer_info">Copyright(c)2016 南京思为装饰设计有限公司
@@ -198,6 +217,7 @@ opacity: 1;
 <script type="text/javascript">
     $(function () {        
         init();
+        showResult(1285300);
 
         $('.ck_choose_item').click(function(){
             $(this).toggleClass('sel');
@@ -267,6 +287,21 @@ opacity: 1;
         rz_price = rz_price_arr[rz_choose_item];
         var money = yz_price + rz_price + gxb_price;
         alert(money);
+    }
+
+    function showResult(money){
+        var element = $('#cal_result .money');
+        var add = parseInt(money / 200);
+        var start = 0;
+        var timer = setInterval(function(){            
+            if(start < money){
+                start = start + add;
+            }else{
+                start = money;
+                clearInterval(timer);
+            }
+            element.html(start);
+        },10);
     }
 </script>
 
