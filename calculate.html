@@ -155,17 +155,15 @@ opacity: 1;
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-id="1"><img src="http://img.zixuwuyou.cn/upload/image/index_scroll_pic/jianyue.jpg"></div>
                 <div class="swiper-slide" data-id="2"><img src="http://img.zixuwuyou.cn/upload/image/index_scroll_pic/oushi.jpg"></div>
-                <div class="swiper-slide" data-id="3"><img src="http://img.zixuwuyou.cn/upload/image/index_scroll_pic/xinzhongshi.jpg"></div>
             </div>
         </div>
 
         <div id="style_choose">
-            <div class="style_choose-header">方案选择</div>
+            <div class="style_choose-header">风格选择</div>
             <div class="style_choose-body">
                 <p style="padding: 0 1rem;">
                     <i class="style_choose_item choose_item" data-id="1">简约</i>
                     <i class="style_choose_item choose_item" data-id="2">欧式</i>
-                    <i class="style_choose_item choose_item" data-id="3">新中式</i>
                 </p>
             </div>
         </div>
@@ -303,6 +301,388 @@ opacity: 1;
             element.html(start);
         },20);
     }
+
+    var json_str = {
+        "jianyue": {
+            "keting": [
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 3000,
+                    "count": 1,
+                    "des": "三人沙发"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 1700,
+                    "count": 2,
+                    "des": "单人沙发"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 1420,
+                    "count": 1,
+                    "des": "茶几"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 2860,
+                    "count": 1,
+                    "des": "电视柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2765,
+                    "count": 1,
+                    "des": "定制鞋柜，双饰面门板。规格：1.2*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 2200,
+                    "count": 1,
+                    "des": "吊灯"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 1200,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "canting": [
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 3260,
+                    "count": 1,
+                    "des": "餐桌"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 570,
+                    "count": 4,
+                    "des": "椅子"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 720,
+                    "count": 1,
+                    "des": "三头吊灯"
+                }
+            ],
+            "zhuwo": [
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 4760,
+                    "count": 1,
+                    "des": "床"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 960,
+                    "count": 2,
+                    "des": "床头柜"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 1600,
+                    "count": 1,
+                    "des": "电视柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 4608,
+                    "count": 1,
+                    "des": "定制衣柜，双饰面门板。规格：2*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 750,
+                    "count": 1,
+                    "des": "吊灯"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 1000,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "ciwo": [
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 4760,
+                    "count": 1,
+                    "des": "床"
+                },
+                {
+                    "pinpai": "欧宝-博登系列",
+                    "kuanshi": "",
+                    "unit_price": 960,
+                    "count": 2,
+                    "des": "床头柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 3456,
+                    "count": 1,
+                    "des": "定制衣柜，双饰面门板。规格：1.5*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 720,
+                    "count": 1,
+                    "des": "吸顶灯"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 800,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "weishengjian": [
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 1848,
+                    "count": 1,
+                    "des": "定制洗脸台盆柜，双饰面门板。规格：1.2*0.55m"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 200,
+                    "count": 1,
+                    "des": "百叶帘"
+                }
+            ],
+            "yangtai": [
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2996,
+                    "count": 1,
+                    "des": "定制储物柜，双饰面门板。规格：1.3*2.4m"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2002,
+                    "count": 1,
+                    "des": "定制洗衣机地柜，双饰面门板。规格：1.3*0.55m"
+                }
+            ]
+        },
+        "oushi": {
+            "keting": [
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 4260,
+                    "count": 1,
+                    "des": "三人沙发"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 3260,
+                    "count": 2,
+                    "des": "单人沙发"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 3240,
+                    "count": 1,
+                    "des": "茶几"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 5700,
+                    "count": 1,
+                    "des": "电视柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2765,
+                    "count": 1,
+                    "des": "定制鞋柜，双饰面门板。规格：1.2*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 2200,
+                    "count": 1,
+                    "des": "吊灯"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 1500,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "canting": [
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 2980,
+                    "count": 1,
+                    "des": "餐桌"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 1240,
+                    "count": 4,
+                    "des": "椅子"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 700,
+                    "count": 1,
+                    "des": "三头吊灯"
+                }
+            ],
+            "zhuwo": [
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 9860,
+                    "count": 1,
+                    "des": "床"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 2540,
+                    "count": 2,
+                    "des": "床头柜"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 3420,
+                    "count": 1,
+                    "des": "电视柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 4608,
+                    "count": 1,
+                    "des": "定制衣柜，双饰面门板。规格：2*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 900,
+                    "count": 1,
+                    "des": "吊灯（六个头）"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 1300,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "ciwo": [
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 9860,
+                    "count": 1,
+                    "des": "床"
+                },
+                {
+                    "pinpai": "欧宝-缇美系列",
+                    "kuanshi": "",
+                    "unit_price": 2540,
+                    "count": 2,
+                    "des": "床头柜"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 3456,
+                    "count": 1,
+                    "des": "定制衣柜，双饰面门板。规格：1.5*2.4m"
+                },
+                {
+                    "pinpai": "",
+                    "kuanshi": "",
+                    "unit_price": 800,
+                    "count": 1,
+                    "des": "吊灯（三个头）"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 1000,
+                    "count": 1,
+                    "des": "窗帘"
+                }
+            ],
+            "weishengjian": [
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 1848,
+                    "count": 1,
+                    "des": "定制洗脸台盆柜，双饰面门板。规格：1.2*0.55m"
+                },
+                {
+                    "pinpai": "锦家居",
+                    "kuanshi": "",
+                    "unit_price": 200,
+                    "count": 1,
+                    "des": "百叶帘"
+                }
+            ],
+            "yangtai": [
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2996,
+                    "count": 1,
+                    "des": "定制储物柜，双饰面门板。规格：1.3*2.4m"
+                },
+                {
+                    "pinpai": "至爱品尚",
+                    "kuanshi": "",
+                    "unit_price": 2002,
+                    "count": 1,
+                    "des": "定制洗衣机地柜，双饰面门板。规格：1.3*0.55m"
+                }
+            ]
+        }
+    };
+
 </script>
 
 <div class="nav-bottom">
