@@ -41,12 +41,12 @@ opacity: .4;
 .swiper-pagination-bullet-active {
 opacity: 1;
 }
-#style_choose,#yz_choose,#rz_choose,#gxb_choose,#house_area,#cal_btn_contain{
+#style_choose,#yz_choose,#rz_choose,#hx_choose,#gxb_choose,#house_area,#cal_btn_contain{
     background-color: #fff;
     padding: .5rem 0;
     border-bottom: 1px solid #dfdfdf;
 }
-.style_choose-header,.yz_choose-header,.rz_choose-header,.gxb_choose-header{
+.style_choose-header,.hx_choose-header,.yz_choose-header,.rz_choose-header,.gxb_choose-header{
     border-left: .15rem solid #5ba729;
     font-size: .8rem;
     line-height: 1rem;
@@ -99,6 +99,58 @@ opacity: 1;
     color: #666;
 
 }
+
+.form-line{
+    background-color: #ffffff;
+}
+
+.input_dock{
+    margin: 0 1rem;
+    border: 1px solid #5ba729;
+    position: relative;
+    border-radius: 0.3rem;
+}
+.input_dock>input{
+    width: 90%;
+    height: 2rem;
+    margin: 0 0.5rem 0 0.5rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #5ba729;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+    text-align: left;
+}
+#house>div>label{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    color: #666;
+}
+.select_dock{
+    margin: 0.5rem 0 0 0;
+    border: 1px solid #5ba729;
+    position: relative;
+    border-radius: 0.3rem;
+    width: 29%;
+    display: inline-block;
+    background-color: #ffffff;
+    padding-bottom: 1px;
+}
+.select_dock>select{
+    height: 1.8rem;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 0.4rem;
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+    color: #5ba729;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+    width: 100%;
+}
+
 #cal_btn_contain{
     width: 100%;
     padding: 0.5rem 1rem;
@@ -167,6 +219,61 @@ opacity: 1;
                 </p>
             </div>
         </div>
+        <div id="hx_choose">
+            <div class="hx_choose-header">户型选择</div>
+            <div class="hx_choose-body">
+                <div class="form-line" style="padding: 0 1rem;">
+                    <div class="select_dock">
+                        <select name='zhuwo' id="zhuwo">
+                            <option value="0">0主卧</option>
+                            <option value="1">1主卧</option>
+                            <option value="2">2主卧</option>
+                            <option value="3">3主卧</option>
+                        </select>
+                    </div>
+                    <div class="select_dock">
+                        <select name='ciwo' id="ciwo">
+                            <option value="0">0次卧</option>
+                            <option value="1">1次卧</option>
+                            <option value="2">2次卧</option>
+                            <option value="3">3次卧</option>
+                        </select>
+                    </div>
+                    <div class="select_dock">
+                        <select name='keting' id="keting">
+                            <option value="0">0客厅</option>
+                            <option value="1">1客厅</option>
+                            <option value="2">2客厅</option>
+                            <option value="3">3客厅</option>
+                        </select>
+                    </div>
+                    <div class="select_dock">
+                        <select name='canting' id="canting">
+                            <option value="0">0餐厅</option>
+                            <option value="1">1餐厅</option>
+                            <option value="2">2餐厅</option>
+                            <option value="3">3餐厅</option>
+                        </select>
+                    </div>
+                    <div class="select_dock">
+                        <select name='weishengjian' id="weishengjian">
+                            <option value="0">0卫生间</option>
+                            <option value="1">1卫生间</option>
+                            <option value="2">2卫生间</option>
+                            <option value="3">3卫生间</option>
+                        </select>
+                    </div>
+                    <div class="select_dock">
+                        <select name='yangtai' id="yangtai">
+                            <option value="0">0阳台</option>
+                            <option value="1">1阳台</option>
+                            <option value="2">2阳台</option>
+                            <option value="3">3阳台</option>
+                        </select>
+                    </div>
+                </div>          
+            </div>
+        </div>
         <div id="yz_choose">
             <div class="yz_choose-header">硬装套餐</div>
             <div class="yz_choose-body">
@@ -181,7 +288,6 @@ opacity: 1;
                 <p style="padding: 0 1rem;">
                     <i class="rz_choose_item choose_item" data-id="A">家悦版</i>
                     <i class="rz_choose_item choose_item" data-id="B">豪华版</i>
-                    <i class="rz_choose_item choose_item" data-id="C">尊享版</i>
                 </p>
             </div>
         </div>
@@ -240,18 +346,15 @@ opacity: 1;
 
     function calculate(){
         var yz_price = 0,rz_price = 0,gxb_price = 0;
-        var rz_price_arr = {
-            'A' : 20000,'B' : 30000, 'C' : 50000
-        };
         var gxb_price_arr = {'G1': 1000,'G2' : 800, 'G3' : 700,'G4' : 900,'G5' : 1200};
         var style_choose_item = $(".style_choose_item.sel").attr('data-id');
-        if(typeof(style_choose_item)=="undefined"){
-            layer.open({
-              content: '请选择风格方案'
-              ,time: 1.5
-            });
-            return;
-        }
+        // if(typeof(style_choose_item)=="undefined"){
+        //     layer.open({
+        //       content: '请选择风格方案'
+        //       ,time: 1.5
+        //     });
+        //     return;
+        // }
         var yz_choose_item = $(".yz_choose_item.sel").attr('data-id');
         if(typeof(yz_choose_item)=="undefined"){
             layer.open({
@@ -281,9 +384,24 @@ opacity: 1;
             gxb_price += gxb_price_arr[$(this).attr('data-id')];
         });
         yz_price = house_size*parseInt(yz_choose_item);
-        rz_price = rz_price_arr[rz_choose_item];
+        rz_price = calculate_rz();
         var money = yz_price + rz_price + gxb_price;
         showResult(money);
+    }
+
+    function calculate_rz(){
+        var data = {"zhuwo":$("#zhuwo").val(),"ciwo":$("#ciwo").val(),"keting":$("#keting").val(),"canting":$("#canting").val(),"weishengjian":$("#weishengjian").val(),"yangtai":$("#yangtai").val()}
+        var type = $(".rz_choose_item.sel").attr('data-id');
+        var res = json_str[type];
+        var total_price = 0;
+        for (var p in res){
+            var price = 0;
+            for (var p1 in res[p]){
+                price += res[p][p1]["unit_price"]*res[p][p1]["count"];
+            }
+            total_price += price*data[p];
+        }
+        return total_price;
     }
 
     function showResult(money){
@@ -303,7 +421,7 @@ opacity: 1;
     }
 
     var json_str = {
-        "jianyue": {
+        "A": {
             "keting": [
                 {
                     "pinpai": "欧宝-博登系列",
@@ -492,7 +610,7 @@ opacity: 1;
                 }
             ]
         },
-        "oushi": {
+        "B": {
             "keting": [
                 {
                     "pinpai": "欧宝-缇美系列",
